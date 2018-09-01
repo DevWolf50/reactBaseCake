@@ -3,7 +3,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 const config = {
-  entry: ['babel-polyfill', 'whatwg-fetch', './app/index.js'],
+  entry: ['babel-polyfill', 'whatwg-fetch', './src/index.js'],
   output: {
     filename: 'index_bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -21,7 +21,7 @@ const config = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: './app/index.html',
+      template: './src/index.html',
     }),
   ],
   mode: 'development',
